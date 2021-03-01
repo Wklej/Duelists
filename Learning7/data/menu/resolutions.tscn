@@ -1,0 +1,99 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://data/menu/OptionButton.gd" type="Script" id=1]
+[ext_resource path="res://data/menu/resolutions.gd" type="Script" id=2]
+[ext_resource path="res://data/scenes/NewButton.tscn" type="PackedScene" id=3]
+[ext_resource path="res://data/pauseMenu/resume.png" type="Texture" id=4]
+[ext_resource path="res://data/pauseMenu/exit.png" type="Texture" id=5]
+[ext_resource path="res://data/menu/blankBackground.png" type="Texture" id=6]
+[ext_resource path="res://data/audio/Menu Select.wav" type="AudioStream" id=7]
+
+[node name="ResolutionControl" type="Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -200.0
+margin_top = -90.0
+margin_right = 200.0
+margin_bottom = 110.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_right = 640.0
+margin_bottom = 360.0
+rect_min_size = Vector2( 10, 10 )
+rect_scale = Vector2( 0.625, 0.55 )
+texture = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="fullscreen" type="CheckBox" parent="."]
+margin_left = 5.58673
+margin_top = 14.6651
+margin_right = 103.587
+margin_bottom = 38.6651
+text = "Full Screen"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="OptionButton" type="OptionButton" parent="."]
+margin_left = 199.791
+margin_top = 4.41329
+margin_right = 303.791
+margin_bottom = 54.4133
+custom_constants/arrow_margin = 10
+text = "Resolutions"
+flat = true
+align = 1
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="exit" parent="." instance=ExtResource( 3 )]
+visible = false
+margin_left = -125.0
+margin_top = 10.0
+margin_right = -65.0
+margin_bottom = 70.0001
+rect_min_size = Vector2( 60, 60 )
+
+[node name="TextureRect" parent="exit" index="0"]
+texture = ExtResource( 5 )
+flip_h = true
+
+[node name="back" parent="." instance=ExtResource( 3 )]
+margin_left = -30.0
+margin_top = 10.0
+margin_right = 30.0
+margin_bottom = 70.0
+rect_min_size = Vector2( 60, 60 )
+
+[node name="TextureRect" parent="back" index="0"]
+texture = ExtResource( 4 )
+flip_h = true
+
+[node name="ButtonAudio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 7 )
+volume_db = -20.0
+[connection signal="toggled" from="fullscreen" to="." method="_on_fullscreen_toggled"]
+[connection signal="toggled" from="fullscreen" to="OptionButton" method="_on_fullscreen_toggled"]
+[connection signal="item_selected" from="OptionButton" to="." method="_on_OptionButton_item_selected"]
+[connection signal="button_down" from="exit" to="." method="_on_exit_button_down"]
+[connection signal="mouse_entered" from="exit" to="." method="_on_exit_mouse_entered"]
+[connection signal="mouse_exited" from="exit" to="." method="_on_exit_mouse_exited"]
+[connection signal="pressed" from="exit" to="." method="_on_exit_pressed"]
+[connection signal="button_down" from="back" to="." method="_on_back_button_down"]
+[connection signal="mouse_entered" from="back" to="." method="_on_back_mouse_entered"]
+[connection signal="mouse_exited" from="back" to="." method="_on_back_mouse_exited"]
+[connection signal="pressed" from="back" to="." method="_on_back_pressed"]
+
+[editable path="exit"]
+
+[editable path="back"]

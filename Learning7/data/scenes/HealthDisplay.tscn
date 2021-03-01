@@ -1,0 +1,35 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://data/sprites/hpBar/pinkHpBar.png" type="Texture" id=1]
+[ext_resource path="res://data/scripts/HealthDisplay.gd" type="Script" id=2]
+[ext_resource path="res://data/sprites/hpBar/greenHpBar.png" type="Texture" id=3]
+[ext_resource path="res://data/sprites/hpBar/underLayBar.png" type="Texture" id=4]
+
+[node name="HealthDisplay" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="HealthBar" type="TextureProgress" parent="."]
+margin_left = -49.2809
+margin_top = -64.1679
+margin_right = 50.7191
+margin_bottom = -44.1679
+value = 100.0
+texture_progress = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="UnderProgress" type="TextureProgress" parent="."]
+show_behind_parent = true
+margin_left = -48.516
+margin_top = -63.953
+margin_right = 51.484
+margin_bottom = -42.953
+value = 100.0
+texture_under = ExtResource( 4 )
+texture_progress = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tween" type="Tween" parent="."]

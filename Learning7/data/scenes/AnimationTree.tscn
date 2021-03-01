@@ -1,0 +1,298 @@
+[gd_scene load_steps=69 format=2]
+
+[sub_resource type="AnimationNodeAnimation" id=3]
+animation = "DeadL"
+
+[sub_resource type="AnimationNodeAnimation" id=4]
+animation = "Dead"
+
+[sub_resource type="AnimationNodeBlendSpace2D" id=5]
+blend_point_0/node = SubResource( 3 )
+blend_point_0/pos = Vector2( -1, 0 )
+blend_point_1/node = SubResource( 4 )
+blend_point_1/pos = Vector2( 1, 0 )
+blend_mode = 1
+
+[sub_resource type="AnimationNodeAnimation" id=6]
+animation = "DyingL"
+
+[sub_resource type="AnimationNodeAnimation" id=7]
+animation = "Dying"
+
+[sub_resource type="AnimationNodeBlendSpace2D" id=8]
+blend_point_0/node = SubResource( 6 )
+blend_point_0/pos = Vector2( -1, 0 )
+blend_point_1/node = SubResource( 7 )
+blend_point_1/pos = Vector2( 1, 0 )
+blend_mode = 1
+
+[sub_resource type="AnimationNodeAnimation" id=9]
+animation = "GettingHitL"
+
+[sub_resource type="AnimationNodeAnimation" id=10]
+animation = "GettingHit"
+
+[sub_resource type="AnimationNodeBlendSpace2D" id=11]
+blend_point_0/node = SubResource( 9 )
+blend_point_0/pos = Vector2( -1, 0 )
+blend_point_1/node = SubResource( 10 )
+blend_point_1/pos = Vector2( 1, 0 )
+blend_mode = 1
+
+[sub_resource type="AnimationNodeAnimation" id=12]
+animation = "GroundThrow"
+
+[sub_resource type="AnimationNodeAnimation" id=13]
+animation = "GroundThrowL"
+
+[sub_resource type="AnimationNodeBlendSpace2D" id=14]
+blend_point_0/node = SubResource( 12 )
+blend_point_0/pos = Vector2( 1, 0 )
+blend_point_1/node = SubResource( 13 )
+blend_point_1/pos = Vector2( -1, 0 )
+blend_mode = 1
+
+[sub_resource type="AnimationNodeAnimation" id=15]
+animation = "HitBotL"
+
+[sub_resource type="AnimationNodeAnimation" id=16]
+animation = "HitBot"
+
+[sub_resource type="AnimationNodeBlendSpace2D" id=17]
+blend_point_0/node = SubResource( 15 )
+blend_point_0/pos = Vector2( -1, 0 )
+blend_point_1/node = SubResource( 16 )
+blend_point_1/pos = Vector2( 1, 0 )
+blend_mode = 1
+
+[sub_resource type="AnimationNodeAnimation" id=18]
+animation = "HitHighL"
+
+[sub_resource type="AnimationNodeAnimation" id=19]
+animation = "HitHigh"
+
+[sub_resource type="AnimationNodeBlendSpace2D" id=20]
+blend_point_0/node = SubResource( 18 )
+blend_point_0/pos = Vector2( -1, 0 )
+blend_point_1/node = SubResource( 19 )
+blend_point_1/pos = Vector2( 1, 0 )
+blend_mode = 1
+
+[sub_resource type="AnimationNodeAnimation" id=21]
+animation = "HitMidL"
+
+[sub_resource type="AnimationNodeAnimation" id=22]
+animation = "HitMid"
+
+[sub_resource type="AnimationNodeBlendSpace2D" id=23]
+blend_point_0/node = SubResource( 21 )
+blend_point_0/pos = Vector2( -1, 0 )
+blend_point_1/node = SubResource( 22 )
+blend_point_1/pos = Vector2( 1, 0 )
+blend_mode = 1
+
+[sub_resource type="AnimationNodeAnimation" id=24]
+animation = "IdleBOTL"
+
+[sub_resource type="AnimationNodeAnimation" id=25]
+animation = "IdleBOT"
+
+[sub_resource type="AnimationNodeBlendSpace2D" id=26]
+blend_point_0/node = SubResource( 24 )
+blend_point_0/pos = Vector2( -1, 0 )
+blend_point_1/node = SubResource( 25 )
+blend_point_1/pos = Vector2( 1, 0 )
+blend_mode = 1
+
+[sub_resource type="AnimationNodeAnimation" id=27]
+animation = "IdleHIGHL"
+
+[sub_resource type="AnimationNodeAnimation" id=28]
+animation = "IdleHIGH"
+
+[sub_resource type="AnimationNodeBlendSpace2D" id=29]
+blend_point_0/node = SubResource( 27 )
+blend_point_0/pos = Vector2( -1, 0 )
+blend_point_1/node = SubResource( 28 )
+blend_point_1/pos = Vector2( 1, 0 )
+blend_mode = 1
+
+[sub_resource type="AnimationNodeAnimation" id=30]
+animation = "IdleMIDL"
+
+[sub_resource type="AnimationNodeAnimation" id=31]
+animation = "IdleMID"
+
+[sub_resource type="AnimationNodeBlendSpace2D" id=32]
+blend_point_0/node = SubResource( 30 )
+blend_point_0/pos = Vector2( -1, 0 )
+blend_point_1/node = SubResource( 31 )
+blend_point_1/pos = Vector2( 1, 0 )
+blend_mode = 1
+
+[sub_resource type="AnimationNodeAnimation" id=33]
+animation = "JumpUPNS"
+
+[sub_resource type="AnimationNodeAnimation" id=34]
+animation = "JumpDOWNNS"
+
+[sub_resource type="AnimationNodeBlendSpace2D" id=35]
+blend_point_0/node = SubResource( 33 )
+blend_point_0/pos = Vector2( 0, 1 )
+blend_point_1/node = SubResource( 34 )
+blend_point_1/pos = Vector2( 0, -1 )
+blend_mode = 1
+
+[sub_resource type="AnimationNodeAnimation" id=36]
+animation = "JumpUPS"
+
+[sub_resource type="AnimationNodeAnimation" id=37]
+animation = "JumpDOWNS"
+
+[sub_resource type="AnimationNodeBlendSpace2D" id=38]
+blend_point_0/node = SubResource( 36 )
+blend_point_0/pos = Vector2( 0, 1 )
+blend_point_1/node = SubResource( 37 )
+blend_point_1/pos = Vector2( 0, -1 )
+blend_mode = 1
+
+[sub_resource type="AnimationNodeAnimation" id=39]
+animation = "JumpingThrowL"
+
+[sub_resource type="AnimationNodeAnimation" id=40]
+animation = "JumpingThrow"
+
+[sub_resource type="AnimationNodeBlendSpace2D" id=41]
+blend_point_0/node = SubResource( 39 )
+blend_point_0/pos = Vector2( -1, 0 )
+blend_point_1/node = SubResource( 40 )
+blend_point_1/pos = Vector2( 1, 0 )
+blend_mode = 1
+
+[sub_resource type="AnimationNodeAnimation" id=42]
+animation = "RUNL"
+
+[sub_resource type="AnimationNodeAnimation" id=43]
+animation = "RUN"
+
+[sub_resource type="AnimationNodeBlendSpace2D" id=44]
+blend_point_0/node = SubResource( 42 )
+blend_point_0/pos = Vector2( -1, 0 )
+blend_point_1/node = SubResource( 43 )
+blend_point_1/pos = Vector2( 1, 0 )
+blend_mode = 1
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=45]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=46]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=47]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=48]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=49]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=50]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=51]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=52]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=53]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=54]
+switch_mode = 2
+auto_advance = true
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=55]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=56]
+switch_mode = 2
+auto_advance = true
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=57]
+switch_mode = 2
+auto_advance = true
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=58]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=59]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=60]
+switch_mode = 2
+auto_advance = true
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=61]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=62]
+switch_mode = 2
+auto_advance = true
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=63]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=64]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=65]
+switch_mode = 2
+auto_advance = true
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=66]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=67]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=68]
+
+[sub_resource type="AnimationNodeStateMachine" id=69]
+states/Dead/node = SubResource( 5 )
+states/Dead/position = Vector2( 337.416, -12.95 )
+states/Dying/node = SubResource( 8 )
+states/Dying/position = Vector2( 383.534, 53.05 )
+states/GettingHit/node = SubResource( 11 )
+states/GettingHit/position = Vector2( 198.416, 64.633 )
+states/GroundThrow/node = SubResource( 14 )
+states/GroundThrow/position = Vector2( 157.416, 219.05 )
+states/HitBotB/node = SubResource( 17 )
+states/HitBotB/position = Vector2( 835.398, 310 )
+states/HitHighB/node = SubResource( 20 )
+states/HitHighB/position = Vector2( 835.398, 41 )
+states/HitMidB/node = SubResource( 23 )
+states/HitMidB/position = Vector2( 835.398, 150 )
+states/IdleBOTB/node = SubResource( 26 )
+states/IdleBOTB/position = Vector2( 630.778, 310 )
+states/IdleHIGHB/node = SubResource( 29 )
+states/IdleHIGHB/position = Vector2( 630.778, 41 )
+states/IdleMIDB/node = SubResource( 32 )
+states/IdleMIDB/position = Vector2( 505.778, 150 )
+states/JumpNoSword/node = SubResource( 35 )
+states/JumpNoSword/position = Vector2( 369.289, 329.817 )
+states/JumpSword/node = SubResource( 38 )
+states/JumpSword/position = Vector2( 157.416, 310 )
+states/JumpingThrow/node = SubResource( 41 )
+states/JumpingThrow/position = Vector2( 157.416, 150 )
+states/RUNB/node = SubResource( 44 )
+states/RUNB/position = Vector2( 474.534, -12.95 )
+transitions = [ "IdleMIDB", "IdleHIGHB", SubResource( 45 ), "IdleHIGHB", "IdleMIDB", SubResource( 46 ), "IdleMIDB", "IdleBOTB", SubResource( 47 ), "IdleBOTB", "IdleMIDB", SubResource( 48 ), "IdleMIDB", "RUNB", SubResource( 49 ), "IdleMIDB", "JumpSword", SubResource( 50 ), "JumpSword", "IdleMIDB", SubResource( 51 ), "RUNB", "IdleMIDB", SubResource( 52 ), "IdleHIGHB", "HitHighB", SubResource( 53 ), "HitHighB", "IdleHIGHB", SubResource( 54 ), "IdleMIDB", "HitMidB", SubResource( 55 ), "HitMidB", "IdleMIDB", SubResource( 56 ), "HitBotB", "IdleBOTB", SubResource( 57 ), "IdleBOTB", "HitBotB", SubResource( 58 ), "IdleMIDB", "GroundThrow", SubResource( 59 ), "GroundThrow", "IdleMIDB", SubResource( 60 ), "IdleMIDB", "Dying", SubResource( 61 ), "Dying", "Dead", SubResource( 62 ), "IdleMIDB", "GettingHit", SubResource( 63 ), "GettingHit", "IdleMIDB", SubResource( 64 ), "JumpingThrow", "IdleMIDB", SubResource( 65 ), "IdleMIDB", "JumpingThrow", SubResource( 66 ), "JumpNoSword", "IdleMIDB", SubResource( 67 ), "IdleMIDB", "JumpNoSword", SubResource( 68 ) ]
+start_node = "IdleMIDB"
+graph_offset = Vector2( 108.774, -82.7667 )
+
+[sub_resource type="AnimationNodeStateMachinePlayback" id=70]
+
+[node name="AnimationTree" type="AnimationTree"]
+tree_root = SubResource( 69 )
+anim_player = NodePath("../AnimationPlayer")
+active = true
+parameters/playback = SubResource( 70 )
+parameters/Dead/blend_position = Vector2( 0, 0 )
+parameters/Dying/blend_position = Vector2( 0, 0 )
+parameters/GettingHit/blend_position = Vector2( 0, 0 )
+parameters/GroundThrow/blend_position = Vector2( 0, 0 )
+parameters/HitBotB/blend_position = Vector2( 0, 0 )
+parameters/HitHighB/blend_position = Vector2( 0, 0 )
+parameters/HitMidB/blend_position = Vector2( 0, 0 )
+parameters/IdleBOTB/blend_position = Vector2( 0, 0 )
+parameters/IdleHIGHB/blend_position = Vector2( 0, 0 )
+parameters/IdleMIDB/blend_position = Vector2( 0, 0 )
+parameters/JumpNoSword/blend_position = Vector2( 0, 0 )
+parameters/JumpSword/blend_position = Vector2( 0, 0 )
+parameters/JumpingThrow/blend_position = Vector2( 0, 0 )
+parameters/RUNB/blend_position = Vector2( 0, 0 )

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/spell.wav-ae0adf0b5accc0715eb44f5518b8b2d7.sample"
+
+[deps]
+
+source_file="res://data/audio/RPG Sound Pack/battle/spell.wav"
+dest_files=[ "res://.import/spell.wav-ae0adf0b5accc0715eb44f5518b8b2d7.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

@@ -1,0 +1,60 @@
+[gd_scene load_steps=29 format=2]
+
+[ext_resource path="res://data/animplayer/Dead.tres" type="Animation" id=1]
+[ext_resource path="res://data/animplayer/HitBot.tres" type="Animation" id=2]
+[ext_resource path="res://data/animplayer/HitHigh.tres" type="Animation" id=3]
+[ext_resource path="res://data/animplayer/HitMid.tres" type="Animation" id=4]
+[ext_resource path="res://data/animplayer/IdleBOT.tres" type="Animation" id=5]
+[ext_resource path="res://data/animplayer/Dying.tres" type="Animation" id=6]
+[ext_resource path="res://data/animplayer/HitHighL.tres" type="Animation" id=7]
+[ext_resource path="res://data/animplayer/HitBotL.tres" type="Animation" id=8]
+[ext_resource path="res://data/animplayer/HitMidL.tres" type="Animation" id=9]
+[ext_resource path="res://data/animplayer/IdleBOTL.tres" type="Animation" id=10]
+[ext_resource path="res://data/animplayer/IdleHIGH.tres" type="Animation" id=11]
+[ext_resource path="res://data/animplayer/IdleHighL.tres" type="Animation" id=12]
+[ext_resource path="res://data/animplayer/IdleMID.tres" type="Animation" id=13]
+[ext_resource path="res://data/animplayer/IdleMIDL.tres" type="Animation" id=14]
+[ext_resource path="res://data/animplayer/RUNL.tres" type="Animation" id=15]
+[ext_resource path="res://data/animplayer/RUN.tres" type="Animation" id=16]
+[ext_resource path="res://data/animplayer/JumpingThrow.tres" type="Animation" id=17]
+[ext_resource path="res://data/animplayer/GroundThrow.tres" type="Animation" id=18]
+[ext_resource path="res://data/animplayer/JumpingThrowL.tres" type="Animation" id=19]
+[ext_resource path="res://data/animplayer/GroundThrowL.tres" type="Animation" id=20]
+[ext_resource path="res://data/animplayer/GettingHit.tres" type="Animation" id=21]
+[ext_resource path="res://data/animplayer/GettingHitL.tres" type="Animation" id=22]
+[ext_resource path="res://data/animplayer/DeadL.tres" type="Animation" id=23]
+[ext_resource path="res://data/animplayer/DyingL.tres" type="Animation" id=24]
+[ext_resource path="res://data/animplayer/JumpDOWNS.tres" type="Animation" id=25]
+[ext_resource path="res://data/animplayer/JumpUPSL.tres" type="Animation" id=26]
+[ext_resource path="res://data/animplayer/JumpDOWNSL.tres" type="Animation" id=27]
+[ext_resource path="res://data/animplayer/JumpUPS.tres" type="Animation" id=28]
+
+[node name="AnimationPlayer" type="AnimationPlayer"]
+anims/Dead = ExtResource( 1 )
+anims/DeadL = ExtResource( 23 )
+anims/Dying = ExtResource( 6 )
+anims/DyingL = ExtResource( 24 )
+anims/GettingHit = ExtResource( 21 )
+anims/GettingHitL = ExtResource( 22 )
+anims/GroundThrow = ExtResource( 18 )
+anims/GroundThrowL = ExtResource( 20 )
+anims/HitBot = ExtResource( 2 )
+anims/HitBotL = ExtResource( 8 )
+anims/HitHigh = ExtResource( 3 )
+anims/HitHighL = ExtResource( 7 )
+anims/HitMid = ExtResource( 4 )
+anims/HitMidL = ExtResource( 9 )
+anims/IdleBOT = ExtResource( 5 )
+anims/IdleBOTL = ExtResource( 10 )
+anims/IdleHIGH = ExtResource( 11 )
+anims/IdleHighL = ExtResource( 12 )
+anims/IdleMID = ExtResource( 13 )
+anims/IdleMIDL = ExtResource( 14 )
+anims/JumpDOWNS = ExtResource( 25 )
+anims/JumpDOWNSL = ExtResource( 27 )
+anims/JumpUPS = ExtResource( 28 )
+anims/JumpUPSL = ExtResource( 26 )
+anims/JumpingThrow = ExtResource( 17 )
+anims/JumpingThrowL = ExtResource( 19 )
+anims/RUN = ExtResource( 16 )
+anims/RUNL = ExtResource( 15 )

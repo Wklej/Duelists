@@ -1,0 +1,24 @@
+[gd_scene format=2]
+
+[node name="NewButton" type="Button"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -40.0
+margin_top = -10.0
+margin_right = 40.0
+margin_bottom = 10.0
+rect_min_size = Vector2( 41, 17 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_right = 40.0
+margin_bottom = 17.0
+stretch_mode = 4
+__meta__ = {
+"_edit_use_anchors_": false
+}

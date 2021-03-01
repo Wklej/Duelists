@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/bite-small3.wav-9bb48c486e3961a8f9b4a7f9ab56724a.sample"
+
+[deps]
+
+source_file="res://data/audio/RPG Sound Pack/NPC/beetle/bite-small3.wav"
+dest_files=[ "res://.import/bite-small3.wav-9bb48c486e3961a8f9b4a7f9ab56724a.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

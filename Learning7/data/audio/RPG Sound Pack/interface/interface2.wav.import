@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/interface2.wav-4a80cea2045068c77517ef35d7a7894f.sample"
+
+[deps]
+
+source_file="res://data/audio/RPG Sound Pack/interface/interface2.wav"
+dest_files=[ "res://.import/interface2.wav-4a80cea2045068c77517ef35d7a7894f.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

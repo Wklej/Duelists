@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/door.wav-14d6be99756aa19dfdd507e5805fae30.sample"
+
+[deps]
+
+source_file="res://data/audio/RPG Sound Pack/world/door.wav"
+dest_files=[ "res://.import/door.wav-14d6be99756aa19dfdd507e5805fae30.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

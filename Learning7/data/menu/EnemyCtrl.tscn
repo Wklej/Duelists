@@ -1,0 +1,58 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://data/scenes/animacjaFunkcji.tscn" type="PackedScene" id=1]
+[ext_resource path="res://data/menu/AtakCtrl.tscn" type="PackedScene" id=2]
+[ext_resource path="res://data/menu/RunCtrl.tscn" type="PackedScene" id=3]
+
+[node name="Enemy" type="HBoxContainer"]
+margin_left = 2.21609
+margin_top = 301.386
+margin_right = 642.216
+margin_bottom = 681.386
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Run" type="Control" parent="." instance=ExtResource( 3 )]
+margin_right = 120.0
+margin_bottom = 380.0
+rect_min_size = Vector2( 120, 70 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Atak" type="Control" parent="." instance=ExtResource( 2 )]
+margin_left = 124.0
+margin_right = 244.0
+margin_bottom = 380.0
+rect_min_size = Vector2( 120, 70 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Jump" type="Control" parent="." instance=ExtResource( 1 )]
+margin_left = 248.0
+margin_right = 368.0
+margin_bottom = 380.0
+rect_min_size = Vector2( 120, 70 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Throw" type="Control" parent="." instance=ExtResource( 1 )]
+margin_left = 372.0
+margin_right = 492.0
+margin_bottom = 380.0
+rect_min_size = Vector2( 120, 70 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Control" type="Control" parent="." instance=ExtResource( 1 )]
+margin_left = 496.0
+margin_right = 616.0
+margin_bottom = 380.0
+rect_min_size = Vector2( 120, 70 )
+__meta__ = {
+"_edit_use_anchors_": false
+}

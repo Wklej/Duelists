@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://data/scripts/HighTeleport.gd" type="Script" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 1.03223, 116 )
+
+[node name="HighTeleport" type="Area2D"]
+collision_layer = 0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, 15 )
+scale = Vector2( 1, 1.5 )
+shape = SubResource( 1 )

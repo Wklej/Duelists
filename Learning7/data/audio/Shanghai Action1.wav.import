@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Shanghai Action1.wav-69614d43a55405a027261812849de88a.sample"
+
+[deps]
+
+source_file="res://data/audio/Shanghai Action1.wav"
+dest_files=[ "res://.import/Shanghai Action1.wav-69614d43a55405a027261812849de88a.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=true
+compress/mode=0

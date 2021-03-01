@@ -1,0 +1,14 @@
+sterowanie: 
+
+Player:
+A, D - ruch
+W - skok
+Q, E - zmiana miecza
+S - rzut mieczem
+
+
+Enemy:
+Lewo, prawo - ruch
+gora - skok
+/, shiftP - zmiana miecza
+dol - rzut mieczem

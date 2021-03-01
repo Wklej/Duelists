@@ -1,0 +1,670 @@
+[gd_scene load_steps=38 format=2]
+
+[ext_resource path="res://data/menu/AtakCtrl.tscn" type="PackedScene" id=1]
+[ext_resource path="res://data/sprites/swords/swordNoHandle.png" type="Texture" id=2]
+[ext_resource path="res://data/scenes/animacjaFunkcji.tscn" type="PackedScene" id=3]
+[ext_resource path="res://data/sprites/swords/sword.png" type="Texture" id=4]
+[ext_resource path="res://data/sprites/player2/player2.png" type="Texture" id=5]
+[ext_resource path="res://data/menu/RunCtrl.tscn" type="PackedScene" id=6]
+[ext_resource path="res://data/sprites/player1/player1.png" type="Texture" id=7]
+
+[sub_resource type="AnimationNodeAnimation" id=1]
+animation = "Run"
+
+[sub_resource type="AnimationNodeStateMachine" id=2]
+states/Run/node = SubResource( 1 )
+states/Run/position = Vector2( 429, 83 )
+start_node = "Run"
+
+[sub_resource type="AnimationNodeStateMachinePlayback" id=3]
+
+[sub_resource type="AnimationNodeStateMachinePlayback" id=4]
+
+[sub_resource type="Animation" id=5]
+resource_name = "Jump"
+length = 1.2
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("player:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3, 0.6, 0.9 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 4, 24, 25, 4 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("miecz:flip_v")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("miecz:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 34.5, 23.5 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("miecz:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.3, 0.9 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ true, false, true ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("player:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.3, 0.6, 0.9 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ Vector2( 15, 30 ), Vector2( 15, 15 ), Vector2( 15, 20 ), Vector2( 15, 30 ) ]
+}
+
+[sub_resource type="AnimationNodeAnimation" id=6]
+animation = "Jump"
+
+[sub_resource type="AnimationNodeStateMachine" id=7]
+states/Jump/node = SubResource( 6 )
+states/Jump/position = Vector2( 316, 188 )
+start_node = "Jump"
+
+[sub_resource type="AnimationNodeStateMachinePlayback" id=8]
+
+[sub_resource type="Animation" id=9]
+resource_name = "Throw"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("player:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 4, 16, 17, 18, 19 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("miecz:flip_v")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("miecz:rotation_degrees")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0.0, -78.5, 130.0, 9.0, 5.8 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("miecz:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ Vector2( 34.5, 23.5 ), Vector2( 5.7146, 5.88516 ), Vector2( -2.65631, 40.5097 ), Vector2( 39.1553, 28.6763 ), Vector2( 56.1956, 29.6229 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("miecz:texture")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.8 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 2 ), ExtResource( 4 ) ]
+}
+
+[sub_resource type="AnimationNodeAnimation" id=10]
+animation = "Throw"
+
+[sub_resource type="AnimationNodeStateMachine" id=11]
+states/Throw/node = SubResource( 10 )
+states/Throw/position = Vector2( 393, 60 )
+
+[sub_resource type="AnimationNodeStateMachinePlayback" id=12]
+
+[sub_resource type="Animation" id=13]
+resource_name = "transition"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("miecz:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ Vector2( 34.5, 15.5 ), Vector2( 34.5, 23.5 ), Vector2( 34.5, 34.5 ), Vector2( 34.5, 23.5 ), Vector2( 34.5, 15.5 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("player:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 4, 8, 4, 0 ]
+}
+
+[sub_resource type="AnimationNodeAnimation" id=14]
+animation = "transition"
+
+[sub_resource type="AnimationNodeStateMachine" id=15]
+states/transition/node = SubResource( 14 )
+states/transition/position = Vector2( 305, 109 )
+start_node = "transition"
+
+[sub_resource type="AnimationNodeStateMachinePlayback" id=16]
+
+[sub_resource type="AnimationNodeStateMachinePlayback" id=17]
+
+[sub_resource type="AnimationNodeStateMachinePlayback" id=18]
+
+[sub_resource type="Animation" id=19]
+length = 1.2
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("player:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3, 0.6, 0.9 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 4, 24, 25, 4 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("player:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.3, 0.6, 0.9 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ Vector2( 22, 38 ), Vector2( 22, 25 ), Vector2( 22, 30 ), Vector2( 22, 38 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("miecz:flip_v")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("miecz:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 41.5, 31.5 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("miecz:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.3, 0.9 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ true, false, true ]
+}
+
+[sub_resource type="AnimationNodeAnimation" id=20]
+animation = "Jump"
+
+[sub_resource type="AnimationNodeStateMachine" id=21]
+states/Jump/node = SubResource( 20 )
+states/Jump/position = Vector2( 358, 82 )
+start_node = "Jump"
+
+[sub_resource type="AnimationNodeStateMachinePlayback" id=22]
+
+[sub_resource type="Animation" id=23]
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("player:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 4, 16, 17, 18, 19 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("miecz:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ Vector2( 46, 25.7 ), Vector2( 16.5251, 8.54616 ), Vector2( 9.81589, 42.4121 ), Vector2( 50.6945, 31.6546 ), Vector2( 67.9065, 32.884 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("miecz:texture")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.8 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 2 ), ExtResource( 4 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("miecz:rotation_degrees")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0.0, -78.5, 130.0, 9.0, 5.81082 ]
+}
+
+[sub_resource type="AnimationNodeAnimation" id=24]
+animation = "Throw"
+
+[sub_resource type="AnimationNodeStateMachine" id=25]
+states/Throw/node = SubResource( 24 )
+states/Throw/position = Vector2( 376, 81 )
+start_node = "Throw"
+
+[sub_resource type="AnimationNodeStateMachinePlayback" id=26]
+
+[sub_resource type="Animation" id=27]
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("player:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 4, 8, 4, 0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("miecz:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ Vector2( 38.9, 10.2 ), Vector2( 38.9, 18.2 ), Vector2( 38.9, 29 ), Vector2( 38.9, 18.2 ), Vector2( 38.9, 10.2 ) ]
+}
+
+[sub_resource type="AnimationNodeAnimation" id=28]
+animation = "Transition"
+
+[sub_resource type="AnimationNodeStateMachine" id=29]
+states/Transition/node = SubResource( 28 )
+states/Transition/position = Vector2( 267, 88 )
+start_node = "Transition"
+
+[sub_resource type="AnimationNodeStateMachinePlayback" id=30]
+
+[node name="Sterowanie" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Player" type="HBoxContainer" parent="."]
+margin_left = 12.0
+margin_top = 192.0
+margin_right = 628.0
+margin_bottom = 262.0
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Run" parent="Player" instance=ExtResource( 6 )]
+margin_bottom = 70.0
+
+[node name="player" parent="Player/Run" index="0"]
+texture = ExtResource( 7 )
+vframes = 8
+hframes = 4
+frame = 3
+
+[node name="AnimationTree" parent="Player/Run" index="4"]
+tree_root = SubResource( 2 )
+parameters/playback = SubResource( 3 )
+
+[node name="Atak" parent="Player" instance=ExtResource( 1 )]
+margin_bottom = 70.0
+
+[node name="player" parent="Player/Atak" index="0"]
+texture = ExtResource( 7 )
+vframes = 8
+hframes = 4
+
+[node name="miecz" parent="Player/Atak" index="1"]
+position = Vector2( 26, 21 )
+
+[node name="AnimationTree" parent="Player/Atak" index="4"]
+parameters/playback = SubResource( 4 )
+
+[node name="Jump" parent="Player" instance=ExtResource( 3 )]
+margin_left = 248.0
+margin_top = 0.0
+margin_right = 368.0
+margin_bottom = 70.0
+rect_min_size = Vector2( 120, 70 )
+
+[node name="player" parent="Player/Jump" index="0"]
+position = Vector2( 15, 20 )
+texture = ExtResource( 7 )
+vframes = 8
+hframes = 4
+frame = 25
+
+[node name="miecz" parent="Player/Jump" index="1"]
+visible = false
+position = Vector2( 34.5, 23.5 )
+texture = ExtResource( 2 )
+flip_v = true
+
+[node name="AnimationPlayer" parent="Player/Jump" index="3"]
+anims/Jump = SubResource( 5 )
+
+[node name="AnimationTree" parent="Player/Jump" index="4"]
+tree_root = SubResource( 7 )
+anim_player = NodePath("../AnimationPlayer")
+active = true
+parameters/playback = SubResource( 8 )
+
+[node name="Throw" parent="Player" instance=ExtResource( 3 )]
+margin_left = 372.0
+margin_top = 0.0
+margin_right = 492.0
+margin_bottom = 70.0
+rect_min_size = Vector2( 120, 70 )
+
+[node name="player" parent="Player/Throw" index="0"]
+position = Vector2( 15, 30 )
+texture = ExtResource( 7 )
+vframes = 8
+hframes = 4
+frame = 18
+
+[node name="miecz" parent="Player/Throw" index="1"]
+position = Vector2( 39.1553, 28.6763 )
+rotation = 0.15708
+texture = ExtResource( 2 )
+flip_v = true
+
+[node name="AnimationPlayer" parent="Player/Throw" index="3"]
+anims/Throw = SubResource( 9 )
+
+[node name="AnimationTree" parent="Player/Throw" index="4"]
+tree_root = SubResource( 11 )
+anim_player = NodePath("../AnimationPlayer")
+active = true
+parameters/playback = SubResource( 12 )
+
+[node name="Control" parent="Player" instance=ExtResource( 3 )]
+margin_left = 496.0
+margin_top = 0.0
+margin_right = 616.0
+margin_bottom = 70.0
+rect_min_size = Vector2( 120, 70 )
+
+[node name="player" parent="Player/Control" index="0"]
+position = Vector2( 15, 30 )
+texture = ExtResource( 7 )
+vframes = 8
+hframes = 4
+frame = 4
+
+[node name="miecz" parent="Player/Control" index="1"]
+position = Vector2( 34.5, 23.5 )
+texture = ExtResource( 2 )
+flip_v = true
+
+[node name="AnimationPlayer" parent="Player/Control" index="3"]
+anims/transition = SubResource( 13 )
+
+[node name="AnimationTree" parent="Player/Control" index="4"]
+tree_root = SubResource( 15 )
+anim_player = NodePath("../AnimationPlayer")
+active = true
+parameters/playback = SubResource( 16 )
+
+[node name="Enemy" type="HBoxContainer" parent="."]
+margin_left = 12.0
+margin_top = 118.0
+margin_right = 628.0
+margin_bottom = 188.0
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Run" parent="Enemy" instance=ExtResource( 6 )]
+margin_bottom = 70.0
+
+[node name="player" parent="Enemy/Run" index="0"]
+texture = ExtResource( 5 )
+vframes = 8
+hframes = 4
+frame = 3
+
+[node name="AnimationTree" parent="Enemy/Run" index="4"]
+parameters/playback = SubResource( 17 )
+
+[node name="Atak" parent="Enemy" instance=ExtResource( 1 )]
+margin_bottom = 70.0
+
+[node name="player" parent="Enemy/Atak" index="0"]
+show_behind_parent = true
+texture = ExtResource( 5 )
+vframes = 8
+hframes = 4
+
+[node name="miecz" parent="Enemy/Atak" index="1"]
+position = Vector2( 26, 21 )
+
+[node name="AnimationTree" parent="Enemy/Atak" index="4"]
+parameters/playback = SubResource( 18 )
+
+[node name="Jump" parent="Enemy" instance=ExtResource( 3 )]
+margin_left = 248.0
+margin_top = 0.0
+margin_right = 368.0
+margin_bottom = 70.0
+rect_min_size = Vector2( 120, 70 )
+
+[node name="player" parent="Enemy/Jump" index="0"]
+position = Vector2( 22, 30 )
+texture = ExtResource( 5 )
+vframes = 8
+hframes = 4
+frame = 25
+
+[node name="miecz" parent="Enemy/Jump" index="1"]
+visible = false
+position = Vector2( 41.5, 31.5 )
+texture = ExtResource( 2 )
+flip_v = true
+
+[node name="AnimationPlayer" parent="Enemy/Jump" index="3"]
+anims/Jump = SubResource( 19 )
+
+[node name="AnimationTree" parent="Enemy/Jump" index="4"]
+tree_root = SubResource( 21 )
+anim_player = NodePath("../AnimationPlayer")
+active = true
+parameters/playback = SubResource( 22 )
+
+[node name="Throw" parent="Enemy" instance=ExtResource( 3 )]
+margin_left = 372.0
+margin_top = 0.0
+margin_right = 492.0
+margin_bottom = 70.0
+rect_min_size = Vector2( 120, 70 )
+
+[node name="player" parent="Enemy/Throw" index="0"]
+position = Vector2( 26.3445, 32.3319 )
+texture = ExtResource( 5 )
+vframes = 8
+hframes = 4
+frame = 16
+
+[node name="miecz" parent="Enemy/Throw" index="1"]
+position = Vector2( 16.5251, 8.54616 )
+rotation = -1.37008
+texture = ExtResource( 2 )
+flip_v = true
+
+[node name="AnimationPlayer" parent="Enemy/Throw" index="3"]
+anims/Throw = SubResource( 23 )
+
+[node name="AnimationTree" parent="Enemy/Throw" index="4"]
+tree_root = SubResource( 25 )
+anim_player = NodePath("../AnimationPlayer")
+active = true
+parameters/playback = SubResource( 26 )
+
+[node name="Control" parent="Enemy" instance=ExtResource( 3 )]
+margin_left = 496.0
+margin_top = 0.0
+margin_right = 616.0
+margin_bottom = 70.0
+rect_min_size = Vector2( 120, 70 )
+
+[node name="player" parent="Enemy/Control" index="0"]
+position = Vector2( 19.3583, 24.7356 )
+texture = ExtResource( 5 )
+vframes = 8
+hframes = 4
+frame = 4
+
+[node name="miecz" parent="Enemy/Control" index="1"]
+position = Vector2( 38.9, 18.2 )
+texture = ExtResource( 2 )
+flip_v = true
+
+[node name="AnimationPlayer" parent="Enemy/Control" index="3"]
+anims/Transition = SubResource( 27 )
+
+[node name="AnimationTree" parent="Enemy/Control" index="4"]
+tree_root = SubResource( 29 )
+anim_player = NodePath("../AnimationPlayer")
+active = true
+parameters/playback = SubResource( 30 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+show_behind_parent = true
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -308.0
+margin_top = -72.0
+margin_right = 308.0
+margin_bottom = 72.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[editable path="Player/Run"]
+
+[editable path="Player/Atak"]
+
+[editable path="Player/Jump"]
+
+[editable path="Player/Throw"]
+
+[editable path="Player/Control"]
+
+[editable path="Enemy/Run"]
+
+[editable path="Enemy/Atak"]
+
+[editable path="Enemy/Jump"]
+
+[editable path="Enemy/Throw"]
+
+[editable path="Enemy/Control"]

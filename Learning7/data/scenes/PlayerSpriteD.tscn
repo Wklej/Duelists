@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://data/sprites/player1/player1Dead.png" type="Texture" id=1]
+
+[node name="PlayerSpriteD" type="Sprite"]
+texture = ExtResource( 1 )
+vframes = 3
+hframes = 3
+frame = 6

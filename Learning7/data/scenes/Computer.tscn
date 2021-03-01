@@ -1,0 +1,204 @@
+[gd_scene load_steps=23 format=2]
+
+[ext_resource path="res://data/scripts/Computer.gd" type="Script" id=1]
+[ext_resource path="res://data/scenes/PlayerSprite.tscn" type="PackedScene" id=2]
+[ext_resource path="res://data/scenes/Hurtbox.tscn" type="PackedScene" id=3]
+[ext_resource path="res://data/scenes/Sword.tscn" type="PackedScene" id=4]
+[ext_resource path="res://data/scenes/HealthDisplay.tscn" type="PackedScene" id=5]
+[ext_resource path="res://data/scenes/AnimationPlayer.tscn" type="PackedScene" id=6]
+[ext_resource path="res://data/scenes/PlayerSpriteD.tscn" type="PackedScene" id=7]
+[ext_resource path="res://data/animplayer/IdleHighL.tres" type="Animation" id=8]
+[ext_resource path="res://data/scenes/AnimationTree.tscn" type="PackedScene" id=9]
+[ext_resource path="res://data/sprites/player2/player2.png" type="Texture" id=10]
+[ext_resource path="res://data/sprites/player2/player2Dead.png" type="Texture" id=11]
+[ext_resource path="res://data/scenes/PlayerDetection.tscn" type="PackedScene" id=12]
+[ext_resource path="res://data/scenes/Stats.tscn" type="PackedScene" id=13]
+[ext_resource path="res://data/scenes/WanderController.tscn" type="PackedScene" id=14]
+[ext_resource path="res://data/animplayer/Win.tres" type="Animation" id=15]
+
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 11.2203
+height = 30.826
+
+[sub_resource type="CapsuleShape2D" id=2]
+radius = 11.1332
+height = 31.4581
+
+[sub_resource type="Animation" id=3]
+resource_name = "JumpDOWNNS"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("PlayerSprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 27 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("PlayerSprite:flip_h")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Sword:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "JumpUPNS"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("PlayerSprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 26 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("PlayerSprite:flip_h")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Sword:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="AnimationNodeStateMachinePlayback" id=5]
+
+[sub_resource type="CircleShape2D" id=6]
+radius = 39.2585
+
+[sub_resource type="CircleShape2D" id=7]
+radius = 237.414
+
+[node name="Enemy" type="KinematicBody2D"]
+collision_layer = 32
+script = ExtResource( 1 )
+
+[node name="PlayerSprite" parent="." instance=ExtResource( 2 )]
+texture = ExtResource( 10 )
+flip_h = true
+frame = 5
+
+[node name="PlayerSpriteD" parent="." instance=ExtResource( 7 )]
+visible = false
+texture = ExtResource( 11 )
+
+[node name="Sword" parent="." instance=ExtResource( 4 )]
+show_behind_parent = true
+position = Vector2( -19.5, -6.32 )
+collision_mask = 144
+
+[node name="SwordSprite" parent="Sword" index="0"]
+flip_h = true
+
+[node name="Hitbox" parent="Sword" index="1"]
+collision_layer = 64
+collision_mask = 144
+
+[node name="CollisionShape2D" parent="Sword/Hitbox" index="0"]
+disabled = true
+
+[node name="SwordDetectionBox" parent="Sword" index="2"]
+collision_layer = 64
+collision_mask = 16
+
+[node name="SwordPos" parent="Sword" index="4"]
+position = Vector2( -15.4022, 0.484626 )
+
+[node name="EnemyHurtBox" parent="." instance=ExtResource( 3 )]
+visible = false
+collision_layer = 8
+
+[node name="CollisionShape2D" parent="EnemyHurtBox" index="0"]
+position = Vector2( -2.36171, 0.661278 )
+shape = SubResource( 1 )
+
+[node name="HealthDisplay" parent="." instance=ExtResource( 5 )]
+position = Vector2( 20, 20 )
+
+[node name="EnemyCollision" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2( -2.32516, 0.664333 )
+shape = SubResource( 2 )
+
+[node name="AnimationPlayer" parent="." instance=ExtResource( 6 )]
+anims/IdleHIGHL = ExtResource( 8 )
+anims/JumpDOWNNS = SubResource( 3 )
+anims/JumpUPNS = SubResource( 4 )
+anims/Win = ExtResource( 15 )
+
+[node name="AnimationTree" parent="." instance=ExtResource( 9 )]
+parameters/playback = SubResource( 5 )
+
+[node name="Stats" parent="." instance=ExtResource( 13 )]
+
+[node name="AttackTrigger" parent="." instance=ExtResource( 12 )]
+collision_layer = 512
+
+[node name="CollisionShape2D" parent="AttackTrigger" index="0"]
+shape = SubResource( 6 )
+
+[node name="PlayerDetectionZone" parent="." instance=ExtResource( 12 )]
+collision_layer = 256
+
+[node name="CollisionShape2D" parent="PlayerDetectionZone" index="0"]
+shape = SubResource( 7 )
+
+[node name="WanderController" parent="." instance=ExtResource( 14 )]
+[connection signal="area_entered" from="Sword/SwordDetectionBox" to="." method="_on_SwordDetectionBox_area_entered"]
+[connection signal="area_entered" from="EnemyHurtBox" to="." method="_on_PlayerHurtBox_area_entered"]
+[connection signal="no_health" from="Stats" to="." method="_on_Stats_no_health"]
+
+[editable path="Sword"]
+
+[editable path="Sword/Hitbox"]
+
+[editable path="EnemyHurtBox"]
+
+[editable path="AnimationPlayer"]
+
+[editable path="AttackTrigger"]
+
+[editable path="PlayerDetectionZone"]

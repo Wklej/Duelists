@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/metal-ringing.wav-5073d1aa52eb5401b0402e379928a627.sample"
+
+[deps]
+
+source_file="res://data/audio/RPG Sound Pack/inventory/metal-ringing.wav"
+dest_files=[ "res://.import/metal-ringing.wav-5073d1aa52eb5401b0402e379928a627.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
